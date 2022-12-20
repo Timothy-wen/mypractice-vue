@@ -8,7 +8,7 @@ import './assets/css/global.css'
 import './assets/css/iconfont.css'
 import './assets/css/index.css'
 import './assets/css/me.css'
-import './plugins/element.js'
+//import './plugins/element.js'
 const app = createApp(App)
 app.use(router)
 app.mount('#app')
