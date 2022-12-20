@@ -10,8 +10,8 @@
 
                 <!-- 联系方式 -->
                 <div class="blog-contact animated zoomIn">
-                    <a class="github circular icon button" data-content="https://gitee.com/fang-jiale"
-                        data-position="bottom center" style="margin-right: 50px">
+                    <a class="github circular icon button" data-content="" data-position="bottom center"
+                        style="margin-right: 50px">
                         <i class="github icon"></i>
                     </a>
                     <a class="wechat circular icon button" style="margin-right: 50px">
@@ -200,8 +200,10 @@
 </template>
 
 <script>
-/* import { Notification } from 'element-ui'
-import Footer from '../components/layout/Footer' */
+//全局的通知提醒消息
+import { ElNotification } from 'element-plus'
+
+/* import Footer from '../components/layout/Footer' */
 
 export default {
 
@@ -243,14 +245,14 @@ export default {
     },
 
     created() {
-        //this.message()//右上角消息提醒
+        //this.message()//右上角消息提醒，改：有问题
         this.getUser()
         this.findPage()
         this.getTypeList()
         this.getTagList()
         this.getLatestList()
         this.reload()
-        //this.$http.get('server/admapi/test')
+        this.$http.get('server/admapi/test')
 
     },
 
@@ -265,24 +267,24 @@ export default {
         },
 
         //右上角消息提醒
-        /* message() {
-          const messageFlag = sessionStorage.getItem('messageFlag')
-          if (messageFlag == null) {
-            Notification({
-              title: '消息',
-              message: '在本站中各位可以创建用户发布博客、评论、留言等进行测试，但是没有实际意义的博客会被站主删除，望各位知悉',
-              duration: 0
-            })
-            const h = this.$createElement
-            Notification({
-              title: '通知',
-              message: h('i', { style: 'color: teal' }, '此次更新了一个新模块：聊天室模块，后花园也有新功能，测试还不完善可能还有bug。' +
-                '用户数据都被删除了，需要各位重新注册一个账号，不便之处敬请谅解！'),
-              duration: 0
-            })
-          }
-          sessionStorage.setItem('messageFlag', 'true')
-        }, */
+        message() {
+            const messageFlag = sessionStorage.getItem('messageFlag')
+            if (messageFlag == null) {
+                ElNotification({
+                    title: '消息',
+                    message: '在本站中各位可以创建用户发布博客、评论、留言等进行测试，但是没有实际意义的博客会被站主删除，望各位知悉',
+                    duration: 0
+                })
+                const h = this.$createElement
+                ElNotification({
+                    title: '通知',
+                    message: h('i', { style: 'color: teal' }, '此次更新了一个新模块：聊天室模块，后花园也有新功能，测试还不完善可能还有bug。' +
+                        '用户数据都被删除了，需要各位重新注册一个账号，不便之处敬请谅解！'),
+                    duration: 0
+                })
+            }
+            sessionStorage.setItem('messageFlag', 'true')
+        },
 
         // 初始化
         scrollDown() {
@@ -333,6 +335,7 @@ export default {
                 pageSize: this.pagination.pageSize,
                 queryString: this.pagination.queryString
             }
+
             var param2 = this.$encruption(JSON.stringify(param))
             const { data: res } = await this.$http.post('/server/home/findHomePage', param2)
             // 解析controller响应回的数据
@@ -370,7 +373,7 @@ export default {
     mounted() {
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide')
-        })m - home
+        })
         $('.ui.dropdown').dropdown({
             on: 'hover'
         })
@@ -396,7 +399,7 @@ export default {
     left: 0;
     right: 0;
     height: 100vh;
-    background: url("../../public/image/home-banner-bg.jpg") center center / cover no-repeat;
+    background: url("../assets/images/home-banner-bg.jpg") center center / cover no-repeat;
     background-color: #49b1f5;
     background-attachment: fixed;
     text-align: center;

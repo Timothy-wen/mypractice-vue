@@ -1,23 +1,23 @@
-
 body {
-  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),default;
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), default;
 }
 
-ul{
-  padding:0 !important;
+ul {
+  padding: 0 !important;
 }
 
-.v-dialog--fullscreen > .v-card {
+.v-dialog--fullscreen>.v-card {
   min-height: 100%;
   min-width: 100%;
   padding: 20px !important;
 }
 
-.v-navigation-drawer,.v-toolbar{
+.v-navigation-drawer,
+.v-toolbar {
   transition: all 0.5s;
 }
 
-.v-application{
+.v-application {
   font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -45,7 +45,7 @@ ul{
   background-color: rgba(0, 0, 0, 0);
 }
 
-.theme--light.v-app-bar.v-toolbar.v-sheet a{
+.theme--light.v-app-bar.v-toolbar.v-sheet a {
   color: #eee;
 }
 
@@ -57,12 +57,12 @@ ul{
   background: #f6f8fa;
 }
 
-.theme--light.v-application{
-  background: linear-gradient(90deg,rgba(247,149,51,.1) 0,rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1) 100%);
+.theme--light.v-application {
+  background: linear-gradient(90deg, rgba(247, 149, 51, .1) 0, rgba(243, 112, 85, .1) 15%, rgba(239, 78, 123, .1) 30%, rgba(161, 102, 171, .1) 44%, rgba(80, 115, 184, .1) 58%, rgba(16, 152, 173, .1) 72%, rgba(7, 179, 155, .1) 86%, rgba(109, 186, 130, .1) 100%);
   color: #4c4948;
 }
 
-.theme--light.v-application a{
+.theme--light.v-application a {
   color: #4c4948;
   text-decoration: none;
 }
@@ -71,22 +71,22 @@ ul{
   border-color: #ccc;
 }
 
-.theme--dark.v-card{
+.theme--dark.v-card {
   background: #121212;
-  color: rgba(255,255,255,0.8) ;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .theme--dark.v-footer {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.theme--dark.v-application{
+.theme--dark.v-application {
   background: #121212;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.theme--dark.v-application a{
-  color: rgba(255,255,255,0.8);
+.theme--dark.v-application a {
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 }
 
@@ -111,15 +111,16 @@ canvas {
   animation: to_show 4s;
 }
 
-@keyframes to_show{
+@keyframes to_show {
   0% {
     opacity: 0;
     filter: alpha(opacity=0);
   }
-100% {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
+
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
 }
 
@@ -128,9 +129,12 @@ p {
 }
 
 @media (min-width: 760px) {
-  .v-toolbar__content, .v-toolbar__extension {
+
+  .v-toolbar__content,
+  .v-toolbar__extension {
     padding: 10px 36px;
   }
+
   .banner {
     position: absolute;
     background-color: #49b1f5;
@@ -140,6 +144,7 @@ p {
     height: 400px;
     animation: header-effect 1s;
   }
+
   .banner-title {
     animation: title-scale 1s;
     position: absolute;
@@ -150,26 +155,32 @@ p {
     text-align: center;
     color: #eee;
   }
+
   .blog-container {
     animation: main 1s;
     max-width: 970px;
     padding: 50px 40px;
     margin: 382px auto 70px auto;
   }
+
   .login-container {
     padding: 1rem;
     border-radius: 4px;
     height: 500px;
   }
+
   .login-wrapper {
-   padding: 3.5rem 1.5rem 0 1.5rem;
-   }
+    padding: 3.5rem 1.5rem 0 1.5rem;
+  }
 }
 
 @media (max-width: 759px) {
-  .v-toolbar__content, .v-toolbar__extension {
+
+  .v-toolbar__content,
+  .v-toolbar__extension {
     padding: 10px 16px;
   }
+
   .banner {
     position: absolute;
     top: -58px;
@@ -178,11 +189,13 @@ p {
     height: 280px;
     animation: header-effect 1s;
   }
+
   .blog-container {
     animation: main 1s;
     margin: 242px 5px 0 5px;
     padding: 36px 14px;
   }
+
   .banner-title {
     position: absolute;
     top: 8.5rem;
@@ -192,6 +205,7 @@ p {
     color: #eee;
     animation: title-scale 1s;
   }
+
   .login-container {
     padding: 1rem;
     border-radius: 4px;
@@ -199,9 +213,10 @@ p {
     width: 100vw;
 
   }
+
   .login-wrapper {
     padding: 18vh 0.5em 0 0.5rem;
-   }
+  }
 }
 
 ::-webkit-scrollbar {
@@ -216,16 +231,14 @@ p {
 
 ::-webkit-scrollbar-thumb {
   background-color: #49b1f5;
-  background-image: -webkit-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.4) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0.4) 75%,
-    transparent 75%,
-    transparent
-  );
+  background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.4) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.4) 75%,
+      transparent 75%,
+      transparent);
   border-radius: 2em;
 }
 
@@ -269,7 +282,7 @@ p {
   cursor: pointer;
 }
 
-.separator{
+.separator {
   margin: 0 6px;
 }
 
@@ -285,22 +298,22 @@ p {
   background: url(https://cdn.jsdelivr.net/gh/blogimg/HexoStaticFile1/imgbed/2020/02/13/20200213164243.png) 100% 100% no-repeat;
 }
 
-.upload-btn{
+.upload-btn {
   color: #fff;
   margin-left: 1rem;
   background-color: #49b1f5;
 }
 
-.upload-btn:hover{
+.upload-btn:hover {
   background-color: #ff7242;
 }
 
-.cancle-btn{
-  background-color:#FAFAFA;
+.cancle-btn {
+  background-color: #FAFAFA;
   color: #999;
 }
 
-.v-comment-btn{
+.v-comment-btn {
   border: 1px solid #ededed;
   border-color: #fff;
   border-radius: 4px;
@@ -311,22 +324,23 @@ p {
   outline: none;
 }
 
-.comment-input{
+.comment-input {
   position: relative;
 }
 
-.commmen-img{
+.commmen-img {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-@keyframes header-effect{
+@keyframes header-effect {
   0% {
     opacity: 0;
     filter: alpha(opacity=0);
     transform: translateY(-50px);
   }
+
   100% {
     opacity: 1;
     filter: none;
@@ -334,12 +348,13 @@ p {
   }
 }
 
-@keyframes title-scale{
+@keyframes title-scale {
   0% {
     opacity: 0;
     filter: alpha(opacity=0);
     transform: scale(.7);
   }
+
   100% {
     opacity: 1;
     filter: none;
@@ -347,12 +362,13 @@ p {
   }
 }
 
-@keyframes main{
+@keyframes main {
   0% {
     opacity: 0;
     filter: alpha(opacity=0);
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     filter: none;

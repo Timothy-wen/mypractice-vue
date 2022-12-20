@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue</title>
-  </head>
-  <body>
-    <div id="app"></div>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- 网站名设置，暂时写为静态的 -->
+  <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+  <title>MyPractice社区</title>
+
+  <!-- 图标设置 -->
+  <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+
+  <!-- 引入semantic-ui 的css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+
+  <!-- 引入常用组件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/axios/1.2.1/axios.min.js"></script>
+
+  <!-- 引入semantic-ui的js-->
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+  <!-- 引入路由vue-router-->
+  <script src="https://cdn.staticfile.org/vue-router/4.1.6/vue-router.min.js"></script>
+
+  <!-- 平滑滚动 -->
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <!-- 引入 lodash-->
+  <script src="https://cdn.staticfile.org/lodash.js/4.17.21/lodash.min.js"></script>
+  <!-- 引入绘图 echarts -->
+  <script src="https://cdn.staticfile.org/echarts/5.4.1/echarts.min.js"></script>
+  <!-- 导入进度条 nprogress -->
+  <script src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js"></script>
+  <!-- element-plus 的 js 文件 -->
+  <script src="https://cdn.staticfile.org/element-plus/2.2.27/index.js"></script>
+
+</head>
+
+<body>
+
+  <div id="app">
     <script type="module" src="/src/main.js"></script>
-  </body>
+  </div>
+
+</body>
+
 </html>
