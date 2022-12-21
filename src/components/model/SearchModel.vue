@@ -1,6 +1,7 @@
 <template>
   <div>
-    <el-dialog title="搜索" :visible.sync="centerDialogVisible" width="50%" center>
+    <!-- :visible.sync="centerDialogVisible" 要改成 v-model -->
+    <el-dialog title="搜索" v-model="centerDialogVisible" width="50%" center>
 
       <!-- 输入框 -->
       <div class="search-input-wrapper">

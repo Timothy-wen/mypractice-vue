@@ -1,36 +1,43 @@
 <template>
   <div id="navClass" class="navClass" hide-on-scroll flat height="58">
-    <!-- 电脑导航栏 -->
+
+    <!-- 顶部导航栏 -->
     <div class="d-md-block d-none nav-container">
-      <div class="float-left blog-title">
-        <!--        <router-link to="/">-->
-        <!--        </router-link>-->
-      </div>
+
+      <div class="float-left blog-title"></div>
+
       <div class="float-right nav-title">
+
         <el-input v-model="queryString" v-if="searchFlag" style="float: top;width: 100px"
-          placeholder="请输入内容"></el-input><i class="el-icon-circle-close" v-if="searchFlag" @click="closeSearch"></i>
+          placeholder="请输入内容"></el-input>
+        <i class="el-icon-circle-close" v-if="searchFlag" @click="closeSearch"></i>
+
         <div class="menus-item">
           <a @click="search"><i class="iconfont2 iconsousuo" style="color: whitesmoke" /><span
               style="color: whitesmoke;margin-right: 15px">搜索</span></a>
         </div>
+
         <div class="menus-item">
           <router-link to="/home">
             <i class="iconfont2 iconzhuye" style="color: whitesmoke" /><span
               style="color: whitesmoke;margin-right: 10px">首页</span>
           </router-link>
         </div>
+
         <div class="menus-item">
           <router-link to="/discovery">
             <i class="el-icon-headset" style="color: whitesmoke" /><span
               style="color: whitesmoke;margin-right: 10px">音乐盒</span>
           </router-link>
         </div>
+
         <div class="menus-item" @click="openRoom">
           <router-link to="">
             <i class="el-icon-chat-line-round" style="color: whitesmoke" /><span
               style="color: whitesmoke;margin-right: 10px">聊天室</span>
           </router-link>
         </div>
+
         <div class="user-btn">
           <a>
             <i class="el-icon-s-operation" style="color: whitesmoke" /><span
@@ -49,24 +56,28 @@
             </ul>
           </a>
         </div>
+
         <div class="menus-item">
           <router-link to="/archives">
             <i class="iconfont2 iconguidang" style="color: whitesmoke" /><span
               style="color: whitesmoke;margin-right: 10px">归档</span>
           </router-link>
         </div>
+
         <div class="menus-item">
           <router-link to="/link">
             <i class="iconfont2 iconlianjie" style="color: whitesmoke" /><span
               style="color: whitesmoke;margin-right: 10px">友链</span>
           </router-link>
         </div>
+
         <div class="menus-item">
           <router-link to="/message">
             <i class="iconfont2 iconpinglunzu" style="color: whitesmoke" /> <span
               style="color: whitesmoke;margin-right: 10px">留言</span>
           </router-link>
         </div>
+
         <div class="user-btn">
           <a>
             <i class="el-icon-sugar" style="color: whitesmoke" /><span
@@ -90,6 +101,7 @@
             </ul>
           </a>
         </div>
+
         <div class="user-btn">
           <a v-if="avatar === ''">
             <router-link to="/login">
@@ -119,16 +131,15 @@
       </div>
     </div>
     <SearchModel ref="searchModel"></SearchModel>
-    <!-- <Room ref="room"></Room> -->
   </div>
 </template>
 
 <script>
 import SearchModel from '../model/SearchModel.vue'
-/* import Room from '../../views/backyard/Room' */
+
+
 export default {
   components: {
-    /* Room, */
     SearchModel
   },
   created() {
@@ -170,14 +181,16 @@ export default {
       }
       return !!tokenStr
     },
-    openRoom() {//改：准备废弃
-      /* if (this.toLogin()) { this.$refs.room.openFrame() } */
+    openRoom() {//改：聊天室准备废弃
+      //if (this.toLogin()) { this.$refs.room.openFrame() }
     },
     closeSearch() {
       this.searchFlag = false
     },
     search() {
+      console.log(this.$refs.searchModel)
       this.$refs.searchModel.setDialogVisible()
+
       // this.searchFlag = true
       // if (this.queryString !== '') {
       //   sessionStorage.setItem('queryString', this.queryString)
@@ -401,3 +414,4 @@ ul {
   }
 }
 </style>
+

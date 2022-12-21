@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import SearchModel from '../components/model/SearchModel.vue'
 
 // 1. 定义路由组件
 const Home = () => import('../views/Home.vue')
@@ -15,6 +16,11 @@ const routes = [
         path: '/home',
         name: "home",
         component: Home
+    },
+    {
+        path: '/search',
+        name: 'Search',
+        component: SearchModel
     },
 ]
 

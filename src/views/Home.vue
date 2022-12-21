@@ -245,7 +245,7 @@ export default {
     },
 
     created() {
-        //this.message()//右上角消息提醒，改：有问题
+        this.message()//右上角消息提醒，改：有问题
         this.getUser()
         this.findPage()
         this.getTypeList()
@@ -272,16 +272,18 @@ export default {
             if (messageFlag == null) {
                 ElNotification({
                     title: '消息',
-                    message: '在本站中各位可以创建用户发布博客、评论、留言等进行测试，但是没有实际意义的博客会被站主删除，望各位知悉',
+                    message: '欢迎来到摸鱼社区',
                     duration: 0
                 })
-                const h = this.$createElement
+
+                //改：有问题
+                /* const h = this.$createElement
                 ElNotification({
                     title: '通知',
                     message: h('i', { style: 'color: teal' }, '此次更新了一个新模块：聊天室模块，后花园也有新功能，测试还不完善可能还有bug。' +
                         '用户数据都被删除了，需要各位重新注册一个账号，不便之处敬请谅解！'),
                     duration: 0
-                })
+                }) */
             }
             sessionStorage.setItem('messageFlag', 'true')
         },
